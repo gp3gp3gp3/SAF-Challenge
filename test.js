@@ -3,6 +3,16 @@ const index = require('./index')
 const findHighestValue = index.findHighestValue
 const findPositiveReturn = index.findPositiveReturn
 const convertDecimalToPerc = index.convertDecimalToPerc
+const findCumlativeReturn = index.findCumlativeReturn
+
+describe('findCumlativeReturn', function () {
+  describe('#findCumlativeReturn()', function () {
+    it('should find the cumlative return value (aka the geometric average)', function () {
+      const myArray = [-5.07, -0.41, 6.60, 0.27, 1.53, 0.09, 3.56, -0.12, -0.12, -1.94, 3.42, 1.82]
+      assert.equal(findCumlativeReturn(myArray), 9.55)
+    })
+  })
+})
 
 describe('convertDecimalToPerc', function () {
   describe('#convertDecimalToPerc()', function () {

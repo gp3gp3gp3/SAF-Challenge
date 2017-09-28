@@ -1,5 +1,9 @@
 const fs = require('fs')
 
+const findCumlativeReturn = array => {
+
+}
+
 const findHighestValue = array => Math.max(...array)
 
 const convertDecimalToPerc = num => Math.floor((num * 100) * 100) / 100
@@ -31,5 +35,6 @@ module.exports = {
   readText,
   findHighestValue,
   findPositiveReturn,
-  convertDecimalToPerc
+  convertDecimalToPerc,
+  findCumlativeReturn
 }
