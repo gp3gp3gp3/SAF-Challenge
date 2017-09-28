@@ -41,5 +41,6 @@ module.exports = {
   findHighestValue,
   findPositiveReturn,
   convertDecimalToPercRoundDown,
-  findCumlativeReturn
+  findCumlativeReturn,
+  convertDecimalToPercRound
 }

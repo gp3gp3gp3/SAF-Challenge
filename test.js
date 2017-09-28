@@ -4,6 +4,21 @@ const findHighestValue = index.findHighestValue
 const findPositiveReturn = index.findPositiveReturn
 const convertDecimalToPercRoundDown = index.convertDecimalToPercRoundDown
 const findCumlativeReturn = index.findCumlativeReturn
+const convertDecimalToPercRound = index.convertDecimalToPercRound
+
+describe('convertDecimalToPercRound', function () {
+  describe('#convertDecimalToPercRound', function () {
+    it('should not round down to the nearest 2 decimal', function () {
+      const num = 0.09549684837180816
+      assert.equal(convertDecimalToPercRound(num), 9.55)
+    })
+
+    it('should convert a decimal to a percentage number', function () {
+      const num = 0.32
+      assert.equal(convertDecimalToPercRoundDown(num), 32)
+    })
+  })
+})
 
 describe('findCumlativeReturn', function () {
   describe('#findCumlativeReturn()', function () {
