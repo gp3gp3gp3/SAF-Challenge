@@ -1,0 +1,17 @@
+{
+  "name": "saf-challenge",
+  "version": "1.0.0",
+  "description": "Challenge for SAF Platform",
+  "main": "index.js",
+  "dependencies": {
+    "mocha": "^3.5.3",
+    "sinon": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "author": "George Paul",
+  "license": "ISC"
+}
