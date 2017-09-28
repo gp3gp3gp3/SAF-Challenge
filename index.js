@@ -1,6 +1,6 @@
 const runChallenge = () => {
   console.log('hello')
-  return 'hello'
+  // return 'hello'
 }
 runChallenge()
 
