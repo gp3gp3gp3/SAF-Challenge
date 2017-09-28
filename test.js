@@ -2,7 +2,7 @@ const assert = require('assert')
 const index = require('./index')
 const findHighestValue = index.findHighestValue
 const findPositiveReturn = index.findPositiveReturn
-const convertDecimalToPerc = index.convertDecimalToPerc
+const convertDecimalToPercRoundDown = index.convertDecimalToPercRoundDown
 const findCumlativeReturn = index.findCumlativeReturn
 
 describe('findCumlativeReturn', function () {
@@ -14,15 +14,15 @@ describe('findCumlativeReturn', function () {
   })
 })
 
-describe('convertDecimalToPerc', function () {
-  describe('#convertDecimalToPerc()', function () {
+describe('convertDecimalToPercRoundDown', function () {
+  describe('#convertDecimalToPercRoundDown()', function () {
     it('should round down to the nearest 2 decimal', function () {
       const num = 0.66667
-      assert.equal(convertDecimalToPerc(num), 66.66)
+      assert.equal(convertDecimalToPercRoundDown(num), 66.66)
     })
     it('should convert a decimal to a percentage number', function () {
       const num = 0.32
-      assert.equal(convertDecimalToPerc(num), 32)
+      assert.equal(convertDecimalToPercRoundDown(num), 32)
     })
   })
 })

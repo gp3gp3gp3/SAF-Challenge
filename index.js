@@ -1,12 +1,17 @@
 const fs = require('fs')
 
 const findCumlativeReturn = array => {
-
+  const amount = array
+    .map(e => e / 100 + 1)
+    .reduce((cul, cur) => cul * cur) - 1
+  return convertDecimalToPercRound(amount)
 }
+
+const convertDecimalToPercRound = num => Math.round((num * 100) * 100) / 100
 
 const findHighestValue = array => Math.max(...array)
 
-const convertDecimalToPerc = num => Math.floor((num * 100) * 100) / 100
+const convertDecimalToPercRoundDown = num => Math.floor((num * 100) * 100) / 100
 
 const findPositiveReturn = array => {
   const posiAryLen = array.filter(num => num > 0 || num === 0).length
@@ -19,7 +24,7 @@ const readText = fileName => {
     console.log(ary[0])
     console.log('Year: ', ary[1])
     const returnValues = ary[2].split(', ')
-    const percentPositiveMonths = `${convertDecimalToPerc(findPositiveReturn(returnValues))}%`
+    const percentPositiveMonths = `${convertDecimalToPercRoundDown(findPositiveReturn(returnValues))}%`
     console.log(`% Positive Months: ${percentPositiveMonths}`)
     console.log(`Best Month: ${findHighestValue(returnValues)}%`)
   })
@@ -35,6 +40,6 @@ module.exports = {
   readText,
   findHighestValue,
   findPositiveReturn,
-  convertDecimalToPerc,
+  convertDecimalToPercRoundDown,
   findCumlativeReturn
 }
