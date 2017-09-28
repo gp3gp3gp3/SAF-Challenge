@@ -4,8 +4,7 @@
   "description": "Challenge for SAF Platform",
   "main": "index.js",
   "dependencies": {
-    "mocha": "^3.5.3",
-    "sinon": "^4.0.0"
+    "mocha": "^3.5.3"
   },
   "devDependencies": {},
   "scripts": {
