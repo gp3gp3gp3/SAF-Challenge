@@ -15,7 +15,8 @@ const convertDecimalToPercRoundDown = num => Math.floor((num * 100) * 100) / 100
 
 const findPositiveReturn = array => {
   const posiAryLen = array.filter(num => num > 0 || num === 0).length
-  return posiAryLen / array.length
+  const percentage = posiAryLen / array.length
+  return convertDecimalToPercRoundDown(percentage)
 }
 
 const readText = fileName => {
@@ -24,10 +25,12 @@ const readText = fileName => {
     console.log(ary[0])
     console.log('Year: ', ary[1])
     const returnValues = ary[2].split(', ')
-    const percentPositiveMonths = `${convertDecimalToPercRoundDown(findPositiveReturn(returnValues))}%`
-    console.log(`Cumulative Return: ${findCumlativeReturn(returnValues)}%`)
-    console.log(`% Positive Months: ${percentPositiveMonths}`)
-    console.log(`Best Month: ${findHighestValue(returnValues)}%\n`)
+    const cumlativeReturn = findCumlativeReturn(returnValues)
+    const percentPositiveMonths = findPositiveReturn(returnValues)
+    const highestValue = findHighestValue(returnValues)
+    console.log(`Cumulative Return: ${cumlativeReturn}%`)
+    console.log(`% Positive Months: ${percentPositiveMonths}%`)
+    console.log(`Best Month: ${highestValue}%\n`)
   })
 }
 
