@@ -25,8 +25,9 @@ const readText = fileName => {
     console.log('Year: ', ary[1])
     const returnValues = ary[2].split(', ')
     const percentPositiveMonths = `${convertDecimalToPercRoundDown(findPositiveReturn(returnValues))}%`
+    console.log(`Cumulative Return: ${findCumlativeReturn(returnValues)}%`)
     console.log(`% Positive Months: ${percentPositiveMonths}`)
-    console.log(`Best Month: ${findHighestValue(returnValues)}%`)
+    console.log(`Best Month: ${findHighestValue(returnValues)}%\n`)
   })
 }
 
