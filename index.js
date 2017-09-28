@@ -26,9 +26,6 @@ const runChallenge = () => {
   readText('./input_two.txt')
 }
 
-
-runChallenge()
-
 module.exports = {
   runChallenge,
   readText,
